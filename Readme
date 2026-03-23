@@ -1,0 +1,23 @@
+1) premier programme executé avec succès ! nom du programme "premier_programme.py"
+2) premier socket executé avec succès avec un http client (programme : premier_socket.py)
+3) Cette partie était problématique car les sockets n'acceptent pas de chaines de caractères, uniquement des octets j'ai donc dû convertir via url.encode("utf-8") l'url en bytes
+et ensuite injecté dans le socket pour effectuer le GET
+4) fichier serveur créé avec succès
+5) le fichier client a été créé avec succès
+6) que font les 2 scripts?
+Le script serveur ecoute sur le socket réseau qui un trio unique (Adresse IP, Port, Protocole) qui lui permet d'être joignable sur cette composition spécifique. Ici le protocole
+est UDP pour les sockets ensuite l'adresse IP et le port sont choisis dans le script pour le serveur on l'execute avec le port 1060
+Le script client effectue la requete vers le serveur en d'abord creant une chaine de caractere classique ensuite pour l'envoyer dans le socket comme vu dans le programme précédant
+il effectue un encodage en Bytes pour pouvoir le vehiculer dans le socket réseau. ici le client envoie la date/heure courante à chaque exécution.
+Ensuite pour lire son propre socket il effectue une lecture via la methode getsockname pour connaitre son propre port applicatif et ce port client change donc à chaque création de socket
+donc à chaque exécution.
+Le serveur lui envoie aussi un message lui notifiant la taille des données en octets que j'ai affiché via un print car le programme se contentait de le recevoir dans le socket sans
+l'afficher
+7) Quelles sont les différentes fonctions utilisées dans les deux programmes
+Les deux programmes utilisent des fonctions couramment utilisées en C pour la programmation Systèmes à savoir la fonction socket de la librairie socket pour creer l'objet socket
+ensuite la méthode bind (uniquement côté serveur) pour affecter un trio unique à un socket d'ecoute. ensuite la méthode sendto qui est evidemment pour envoyer des données
+sur un socket via le duo unique (l'udp est par défaut ici). ensuite la methode recvfrom permet de recuperer dans 2 données, 1 pour les données recues sur la socket et 1 pour
+l'adresse de provenance de la donnée. cela permet donc par la suite de renvoyer des données sur le socket de l'émetteur.
+Ensuite les fonctions d'encodage et de decodage, on les a deja vu ci-dessus pour les conversions texte - bytes. Les fonctions de temps des libraires de temps pour recuperer
+l'horloge système
+8)
