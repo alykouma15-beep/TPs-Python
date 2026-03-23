@@ -20,4 +20,12 @@ sur un socket via le duo unique (l'udp est par défaut ici). ensuite la methode 
 l'adresse de provenance de la donnée. cela permet donc par la suite de renvoyer des données sur le socket de l'émetteur.
 Ensuite les fonctions d'encodage et de decodage, on les a deja vu ci-dessus pour les conversions texte - bytes. Les fonctions de temps des libraires de temps pour recuperer
 l'horloge système
-8)
+8)Programme serveur réussie avec les classes. J'ai définis des classes representant les paquets IPs en les complexifiant assez pour qu'ils soient utiles. Les paquets vont donc avoir
+une fonction pareil que sur un wireshark en contenant le payload qui sont des octets brutes ensuite des systèmes de methodes pouvant faire les conversions vers du texte et aussi
+des décompositions pour faciliter la lecture avec les ips et port pour pouvoir dissequer facilement un paquet ip selon tous ses attributs regroupés dans une seule entité.
+Exemple : paquet.ip ; paquet.port ; paquet.payload pour le payload en octets brutes ; paquet.text pour le payload en format text ; paquet.actualiserpour a ctualiser le texte
+courant en payload et inversement après changement d'une des deux.
+8) Chat entre 2 clients
+a) Pour realiser le programme, lancer le serveur de tunnel "server_ameliore" puis lancer "client_1" puis lancer "client_2".
+b) Cette architecture est problématique car elle supporte mal les communications imprévisible et scale très mal.
+9) Programme d'itération de produit assez trivial avec double boucle
