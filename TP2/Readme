@@ -1,0 +1,19 @@
+1) Les deux programmes ont été corrigés avec succès. Les erreurs étaient majoritairement reliés aux mêmes problématiques d'encodage que le TP1. C'est à dire que le programme ne
+réalisait pas les substitutions str vers bytes comme il fallait. J'ai donc inseré des encodages et decodage en ascii de part et d'autres du programme et tout fonctionne.
+2)Création des fichiers server_class et client_class pour adaptation du code source en format objet. Etape réussie, les deux programmes ont été adaptés en classe de client et serveur
+avec leurs attributs et méthodes appropriés.
+3) Peut-on utiliser le polymorphisme à ce niveau ? 
+oui on peut l'utiliser en utilisant un heritage entre la class server et client. Mais pour l'instant dans le TP puisqu'on a pas plusieurs clients, les fonctions d'envoie et de reception
+se definissent de la même manière côté serveur et client donc la reponse c'est Oui polymorphisme possible mais l'application sera présente plus tard dans le TP
+4) creation du fichier unique réussie via cli argparse. Lancer "fichier_unique_argprs.py" avec argument de type en ligne de commande "server" ou "client" pour qu'il se comporte
+comme le type voulu
+5)le fichier unique a été finalisée et demontrée en correspondance avec les exigences suivantes : injection à la volée de texte par le user ; taille dynamique.
+Pour réaliser cela j'ai utilisé une serie de communications préalable au vraie message mais qui sont invisibles pour l'utilisateur : le client lors de la saisie du message, calcule la taille du message et envoie une
+signalisation pour indiquer la taille du message au serveur sur le socket, ensuite le serveur recupere cette taille exacte. l'injecte dans sa prochaine ecoute et attend un message de taille exacte donnée
+ensuite le client envoie le vrai message qui va s'emboiter parfaitement avec la taille attendue par le serveur. donc tous les messages se passent en 3 temps : calcul de la taille;
+envoie de la taille au destinataire ; envoie du message. Côté destinataire : ecoute de la taille ; attente du message de la taille donnée ; reception du message
+Pour executer le fichier unique : referez vous à la 4)
+6)A votre avis, qu’est ce qui est mieux adapté pour notre application, des socket UDP ou des socket TCP ? Pourquoi ?
+Ca depend de l'application. TCP peut être lent mais sera beaucoup plus fiable car il garantie l'intégrité des données tandis que UDP sera plus rapide donc adapté pour des DNS,RTP,etc
+mais ne garantie pas la communication.
+7) exos de coding reussies avec des exemples pour chaque
