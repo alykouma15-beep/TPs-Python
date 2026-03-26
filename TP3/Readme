@@ -1,0 +1,16 @@
+1) Formalisation des codes en classes effectués avec succès.
+2)Server fini. Après 2 jours le serveur est opérationnel à 100%. Pour l'utiliser c'est simple. executer "server_ameliore.py" puis vous avez la possibilité d'executer autant de clients
+que vous voulez (Aucune limite). Mon serveur est capable de tout gerer. il vous affichera pour chaque client qui se connecte les autres clients actuellement en ligne. taper simplement l'ID
+du client que vous voulez textez et ecrivez votre message.
+3) J'ai integré des systèmes d'ecoute parallèle et d'affichage automatique donc aucun soucis. Vous pouvez à la fois recevoir en direct les messages des autres et aussi tapez des messages aux autres à la volée
+4) Lancer sur VSCODE ou votre IDE plusieurs fenetres de terminal parallèle le premier sera donc logiquement le serveur. Executer toujours le serveur ameliore en premier. ensuite lancer le même programme client
+sur plusieurs fenetre de terminal
+5)Exos de coding:
+
+a)La recherche de couple utilise une recherche pour chaque element pour trouver son couple donc 1 qui parcours N Nfois donc N^2 de complexité (O(N^2)). L'approche avec les sets
+permet par contre de reduire cette complexité comme notifié dans le fichier. C'est à dire que les listes contenant des doublons peuvent se voir reduire fortement leurs nombre d'étapes
+avec les sets car les doublons seront eliminé. Mais pour une liste sans doublons et non ordonné on atteint la complexité maximale de O(N^2). Nous allons voir dans la partie suivante que
+ce n'est pas inévitable
+
+b) avec le tri on est en mesure d'implementer la fonction binary search ou en mathématique la recherche par dichotomie ce qui est logarithmique au lieu de polynomiale en complexité. On passe donc d'un problème
+O(N^3) à un problème O(N^2log(N))
