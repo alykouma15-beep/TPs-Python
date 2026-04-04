@@ -20,4 +20,5 @@ Après refonte totale du serveur précédent, en formattant toute communication 
 Côté client ne pas oublier de taper un entier 1,2,3,... pour l'ID et pas id1 ou clientid1
 
 4)exo de coding traduction chiffre romain vers entier trivial fichier "coding.py"
+
 5) exo bonus traduction entier vers chiffre romain un peu plus complexe car necessite une prise en compte de la decimale et de la condition de besoin de chiffre superieure et inferieur existant satisfaisant la valeur du nombre. Fichier : "bonus.py"
