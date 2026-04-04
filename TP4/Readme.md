@@ -1,6 +1,6 @@
 1)fichiers "server-xml" et "client-xml" exo 1 exécuté avec succès ! J'ai injecté le message xml et decodé coté serveur. Je déduis les notions suivantes en parsant les différentes méthodes d'ETREE
 
-a) root correspond à la racine. C'est à dire que le langage XML étant un langage balisé, c'est une arborescence hierarchisée donc un elément a des enfants et des parents. logiquement donc le plus grand parent est la racine du fichier d'où l'appelation root. ici "<client>" etant le plus élévée de l'arborescence c'est donc defacto la racine.
+a) root correspond à la racine. C'est à dire que le langage XML étant un langage balisé, c'est une arborescence hierarchisée donc un elément a des enfants et des parents. logiquement donc le plus grand parent est la racine du fichier d'où l'appelation root. ici "client" etant le plus élévée de l'arborescence c'est donc defacto la racine.
 
 b) len(root) donne le nombre d'enfants de l'objet en question. Les enfants correspondent aux nombres de balises indentés dans l'objet. ici ce sera nom, date, lieu dans client par exemple.
 
