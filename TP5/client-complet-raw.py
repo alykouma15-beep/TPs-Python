@@ -225,7 +225,6 @@ def lancer_client(args):
         print("Relance par exemple avec : sudo python3 client-complet-raw.py --nom Aly")
     except TimeoutError:
         print("erreur raw socket: timed out")
-        print("sur macOS, le raw socket entre processus sur la meme machine peut ne jamais repondre")
     except OSError as erreur:
         print(f"erreur raw socket: {erreur}")
 
