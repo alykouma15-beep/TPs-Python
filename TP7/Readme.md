@@ -8,7 +8,7 @@
 7) Pour voir les messages je vais sur http://127.0.0.1:8000/api/messages/. Pour ajouter un message je fais une requête POST sur http://127.0.0.1:8000/api/messages/. Le json pour ajouter un message ressemble à {"expediteur":"aly","destinataire":"mohamed","message":"bonjour"}.
 8) On peut donc réaliser tout type d'echange
 9) Pour voir un seul message je vais sur http://127.0.0.1:8000/api/messages/1/. Pour modifier un message je fais une requête PUT sur http://127.0.0.1:8000/api/messages/1/.  Pour supprimer un message je fais une requête DELETE sur http://127.0.0.1:8000/api/messages/1/.
-10) Pour voir les utilisateurs connectés je vais sur http://127.0.0.1:8000/utilisateurs/. Pour ajouter un utilisateur connecté je fais une requête POST sur http://127.0.0.1:8000/api/utilisateurs/. Les modèles Django sont Message et Utilisateur. Les serializers transforment les objets Django en JSON.
+10) Pour voir les utilisateurs connectés je vais sur http://127.0.0.1:8000/api/utilisateurs/. Pour ajouter un utilisateur connecté je fais une requête POST sur http://127.0.0.1:8000/api/utilisateurs/. Les modèles Django sont Message et Utilisateur. Les serializers transforment les objets Django en JSON.
 11) Les vues dans myapi/views.py gèrent les méthodes GET, POST, PUT et DELETE. Les urls de l'API sont dans myapi/urls.py.
 12) La base de données utilisée est db.sqlite3. Pour refaire les migrations je fais python manage.py makemigrations puis python manage.py migrate. Pour lancer les tests je fais python manage.py test. Pour l'exercice des tableaux je lance python fusion_tableaux.py.
 13) Exo de coding:
