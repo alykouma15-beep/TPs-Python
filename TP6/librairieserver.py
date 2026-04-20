@@ -7,13 +7,15 @@ class Traiteurget(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path=="/home":
             self.send_response(200,"OK")
-            self.send_header("Content-type","test/plain")
+            self.send_header("Content-type","text/html; charset=utf-8")
+            self.end_headers()
             with open("index.html") as f:
                 f=f.read()
                 self.wfile.write(f.encode('utf-8'))
         else:
             self.send_response(404,"NOT FOUND")
-            self.send_header("Content-type","test/plain")
+            self.send_header("Content-type","text/html; charset=utf-8")
+            self.end_headers()
             with open("notfound.html") as f:
                 f=f.read()
                 self.wfile.write(f.encode('utf-8'))

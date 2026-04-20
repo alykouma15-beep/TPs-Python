@@ -4,7 +4,7 @@
 
 Le serveur n'heberge pour l'instant que la route /home donc toute autre requête echouera en 404 NOT FOUND.
 
-3)![alt text](<Capture d’écran 2026-04-13 à 11.42.29.png>) Vous pouvez observer que ça marche egalement sur le navigateur. J'ai inseré une exception d'erreur pouvant gerer les navigateurs car ils ne pourront pas envoyer en json comme un client interne.
+3) Vous pouvez observer que ça marche egalement sur le navigateur. J'ai inseré une exception d'erreur pouvant gerer les navigateurs car ils ne pourront pas envoyer en json comme un client interne.
 
 4)Création de l'application terminé. l'adresse IP:Port simple vous dirigera vers la page d'accueil du serveur sur laquelle vous pouvez vous loguer sur l'application g40aChat avec le login "test" et le mot de passe "test"
 
